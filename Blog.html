@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-[#fbf4e6]  shadow-md sticky top-0 flex justify-between items-center py-3 px-5 backdrop-blur-sm z-50">
+        <button id="home" class="bg-[#082f49] text-white font-bold px-4 py-2 rounded" onclick="window.location.href = 'Home.html';">Home</button>
+
+        <div class="flex items-center">
+            <img src="./assets/logo.png" alt="Logo" class="h-10 mx-auto">
+            <h3 class="text-gray-700 font-bold">Donate Bangladesh</h3>
+        </div>
+        <div class="flex items-center">
+            <img src="./assets/coin.png" alt="Coin" class="h-6 mr-2">
+            <span id="balance" class="text-gray-700 font-bold">98600 BDT</span>
+        </div>
+    </nav>
+
+    <main>
+    
+     <div class="max-w-3xl mx-auto mt-10 p-6 pb-7 bg-white shadow-lg rounded-lg">
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Important FAQ</h1>
+            
+        </div>
+
+        <div>
+
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    What is the Document Object Model (DOM)?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">The DOM (Document Object Model) is a programming interface that represents the structure of an HTML or XML document as a hierarchical tree of objects. It allows developers to access, manipulate, and modify web content using JavaScript. Through the DOM, elements, attributes, and text in a webpage can be dynamically changed, and event handling can be set up to respond to user interactions. This enables developers to create interactive and responsive web applications. The DOM is crucial for real-time updates and user-driven content changes.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    Why DOM?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        The DOM is essential for creating dynamic, interactive web pages. It allows real-time content updates without reloading, enhancing user experience. Through JavaScript, developers can easily manipulate elements and respond to user actions. The DOM ensures cross-browser compatibility, providing a consistent interface across all major browsers. Its modularity enables targeted updates to specific page sections.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    What is event delegation in the context of the DOM, and why is it useful?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        Event delegation is a technique in the DOM where a single event listener is attached to a parent element, allowing it to handle events from its child elements. This is useful because it reduces memory usage by avoiding multiple listeners and ensures that dynamically added elements also respond to events. It enhances performance, especially in large, dynamic web pages. Event delegation simplifies code management by centralizing event handling.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    How do you manipulate an element's attributes and styles using the DOM?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        To manipulate an element's attributes using the DOM, use methods like setAttribute to change or add attributes, and getAttribute to retrieve them. For styles, access the style property to modify CSS directly (e.g., element.style.color = 'red'). You can also use classList to add, remove, or toggle CSS classes. This allows dynamic control over an element's appearance and behavior.
+                    </p>
+                </div>
+            </div>
+        </div>
+     </div>
+    </main>
+
+    
+
+    
+
+    
+    <footer class="bg-[#F9F7F3] pb-20 ">
+
+    </footer> 
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            answer.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
